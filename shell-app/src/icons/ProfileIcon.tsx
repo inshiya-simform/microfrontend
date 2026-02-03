@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProfileIcon = ({ className = "w-7 h-7" }: { className?: string }) => (
   <svg
     className={className}
