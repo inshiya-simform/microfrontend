@@ -9,7 +9,7 @@ export default defineConfig({
     federation({
       name: 'shellApp',
       remotes:{
-        authMF : 'https://auth-qdl5xb6rh-inshiya-ravats-projects.vercel.app/assets/authRemoteEntry.js'
+        authMF : 'https://auth-mf.vercel.app/assets/authRemoteEntry.js'
       },
       shared: [ 'react', 'react-dom']
     })
