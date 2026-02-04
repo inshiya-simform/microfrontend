@@ -1,15 +1,18 @@
 import { useState } from "react";
-import Logo from "../icons/Logo";
-import ProfileIcon from "../icons/ProfileIcon";
 import Dropdown from "antd/es/dropdown/dropdown";
 import type { DropdownProps, MenuProps } from "antd";
+import Logo from "../../icons/Logo";
+import ProfileIcon from "../../icons/ProfileIcon";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
   const handleMenuClick: MenuProps["onClick"] = () => {
     setOpen(false);
-    alert("Logged out!");
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   const handleOpenChange: DropdownProps["onOpenChange"] = (nextOpen, info) => {
