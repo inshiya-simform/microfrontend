@@ -10,7 +10,7 @@ export default defineConfig({
       name: 'shellApp',
       remotes:{
         authMF : 'https://auth-mf.vercel.app/assets/authRemoteEntry.js',
-        productMF: 'http://localhost:5175/assets/productCatalogRemoteEntry.js',
+        productMF: 'https://product-mf.vercel.app/assets/productCatalogRemoteEntry.js',
       },
       shared: [ 'react', 'react-dom', 'react-router-dom']
     })
