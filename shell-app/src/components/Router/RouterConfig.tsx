@@ -3,6 +3,7 @@ import Main from "../Main/Main";
 import Home from "../Home/Home";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import ProductCatalog from "../Product/ProductCatalog";
 
 export const ROUTES: RouteItems[] = [
   {
@@ -21,6 +22,11 @@ export const ROUTES: RouteItems[] = [
       {
         path: "",
         element: Home,
+        isAuth: true,
+      },
+      {
+        path: "/products/*",
+        element: ProductCatalog,
         isAuth: true,
       },
     ],
